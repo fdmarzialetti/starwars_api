@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Star Wars - Personajes</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8c45d456b7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <img src="./assets/images/sw-logo.png" alt="Logo Star Wars">
+    </header>
+    <main>
+        <section class="pagination-section">
+            <div class="pagination-header">
+                <button class="prev-button" disabled><i class="fa-solid fa-arrow-left"></i></button>
+                <div class="pagination-pages">
+                    <p class="actual-page"></p>
+                    <p class="total-pages"></p>
+                </div>
+                <button class="next-button"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <ul id="characters-list"></ul>
+        </section>
+        <section class="character-data-section">
+
+            <!-- LOADER -->
+            <div id="character-loader" class="loader hidden">
+                <div class="spinner"></div>
+            </div>
+
+            <article id="character-info">
+                <h2 id="name">Name: none</h2>
+                <h3 id="planet">Planet: missing information</h3>
+                <h3 id="birth">Birth: ???</h3>
+                <div class="list-films-container">
+                    <h3>Films</h3>
+                    <ul id="list-films" class="list-films">
+                        <li>???</li>
+                        <li>???</li>
+                        <li>???</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./assets/scripts/script.js"></script>
+
+</body>
+
+</html>
