@@ -192,3 +192,14 @@ SPINNER
         transform: rotate(360deg);
     }
 }
+
+@media (width < 768px) {
+  main{
+    flex-direction: column;
+  }
+  .pagination-section{
+    width: 100%;
+    border-right: 0px;
+    border-bottom: 3px solid gray;
+  }
+}

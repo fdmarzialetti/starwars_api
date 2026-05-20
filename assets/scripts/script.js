@@ -71,14 +71,13 @@ const prevPage = () => {
 INFO PERSONAJE
 ================================ */
 const getCharacterInfo = async (event) => {
-
+    console.log(event)
     const characterUrl = event.target.dataset.url;
     if (!characterUrl) return;
 
     try {
         showLoader();
 
-        // 🔥 Delay mínimo de 2 segundos
         const delay = new Promise(resolve =>
             setTimeout(resolve, 800)
         );
@@ -132,28 +131,6 @@ const getCharacterInfo = async (event) => {
     }
 };
 
-/* ================================
-PELÍCULAS (la dejamos igual)
-================================ */
-async function characterAppearanceFilm(films) {
-
-    const moviesList = document.getElementById("list-films");
-    moviesList.innerHTML = "";
-
-    for (const filmUrl of films) {
-        try {
-            const response = await fetch(filmUrl);
-            const data = await response.json();
-
-            const li = document.createElement("li");
-            li.textContent = data.title;
-            moviesList.appendChild(li);
-
-        } catch (error) {
-            console.error("Error al cargar la película:", error);
-        }
-    }
-}
 
 /* ================================
 INICIALIZACIÓN
