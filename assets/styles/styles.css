@@ -201,5 +201,13 @@ SPINNER
     width: 100%;
     border-right: 0px;
     border-bottom: 3px solid gray;
+    min-height: auto;
+  }
+   #characters-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8em;
+    justify-items: center;
+    align-items: start;
   }
 }
